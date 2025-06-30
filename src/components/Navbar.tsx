@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const handleWhatsAppClick = () => {
     const message = `Hi! I'm interested in your tour packages. Can you provide more details about pricing, availability, and booking process?`;
-    const phone = '917906708464'; // Make sure this is valid
+    const phone = '919557538664'; // Make sure this is valid
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };

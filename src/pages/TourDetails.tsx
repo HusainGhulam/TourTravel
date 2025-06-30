@@ -1278,7 +1278,7 @@ const TourDetails = () => {
                       className="w-full bg-green-600 hover:bg-green-700 text-white hover:scale-105 transition-transform"
                       onClick={() => {
                         const message = `Hi! I'm interested in the ${tour.title} tour. Can you provide more details about pricing, availability, and booking process?`;
-                        const whatsappUrl = `https://wa.me/9179067088464?text=${encodeURIComponent(message)}`;
+                        const whatsappUrl = `https://wa.me/919557538664?text=${encodeURIComponent(message)}`;
                         window.open(whatsappUrl, '_blank');
                       }}
                     >
