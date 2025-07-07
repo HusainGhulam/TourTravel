@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -11,6 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { CalendarIcon, CreditCard } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
+import emailjs from '@emailjs/browser';
 
 interface BookingFormPopupProps {
   isOpen: boolean;
@@ -22,11 +22,20 @@ const BookingFormPopup = ({ isOpen, onClose }: BookingFormPopupProps) => {
   const [endDate, setEndDate] = useState<Date>();
   const [agreeTerms, setAgreeTerms] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle booking submission here
-    console.log("Booking form submitted");
-    onClose();
+    emailjs.sendForm(
+      'service_410d7ke', // Service ID
+      'template_zvvgqem', // Template ID
+      e.currentTarget, // The form element
+      'dJC0lkYpFfxOYbUn-' // Public key
+    )
+    .then((result) => {
+        alert('Booking request sent successfully!');
+        // Optionally reset the form here
+    }, (error) => {
+        alert('Failed to send booking request. Please try again.');
+    });
   };
 
   return (
@@ -43,22 +52,22 @@ const BookingFormPopup = ({ isOpen, onClose }: BookingFormPopupProps) => {
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="block text-sm font-medium mb-1">First Name</label>
-                <Input placeholder="John" required />
+                <Input name="first_name" placeholder="John" required />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-1">Last Name</label>
-                <Input placeholder="Doe" required />
+                <Input name="last_name" placeholder="Doe" required />
               </div>
             </div>
             
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="block text-sm font-medium mb-1">Email</label>
-                <Input type="email" placeholder="john@example.com" required />
+                <Input name="email" type="email" placeholder="john@example.com" required />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-1">Phone</label>
-                <Input placeholder="Enter Phone Number" required />
+                <Input name="phone" placeholder="Enter Phone Number" required />
               </div>
             </div>
           </div>
@@ -92,6 +101,8 @@ const BookingFormPopup = ({ isOpen, onClose }: BookingFormPopupProps) => {
                     />
                   </PopoverContent>
                 </Popover>
+                {/* Hidden input for start_date */}
+                <input type="hidden" name="start_date" value={startDate ? format(startDate, 'yyyy-MM-dd') : ''} />
               </div>
               
               <div>
@@ -119,13 +130,18 @@ const BookingFormPopup = ({ isOpen, onClose }: BookingFormPopupProps) => {
                     />
                   </PopoverContent>
                 </Popover>
+                {/* Hidden input for end_date */}
+                <input type="hidden" name="end_date" value={endDate ? format(endDate, 'yyyy-MM-dd') : ''} />
               </div>
             </div>
             
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="block text-sm font-medium mb-1">Adults</label>
-                <Select>
+                <Select name="adults" onValueChange={value => {
+                  const event = { target: { value } } as any;
+                  (document.getElementsByName('adults')[0] as HTMLInputElement).value = value;
+                }}>
                   <SelectTrigger>
                     <SelectValue placeholder="Adults" />
                   </SelectTrigger>
@@ -137,11 +153,16 @@ const BookingFormPopup = ({ isOpen, onClose }: BookingFormPopupProps) => {
                     <SelectItem value="5+">5+ Adults</SelectItem>
                   </SelectContent>
                 </Select>
+                {/* Hidden input for adults */}
+                <input type="hidden" name="adults" />
               </div>
               
               <div>
                 <label className="block text-sm font-medium mb-1">Children</label>
-                <Select>
+                <Select name="children" onValueChange={value => {
+                  const event = { target: { value } } as any;
+                  (document.getElementsByName('children')[0] as HTMLInputElement).value = value;
+                }}>
                   <SelectTrigger>
                     <SelectValue placeholder="Children" />
                   </SelectTrigger>
@@ -153,12 +174,17 @@ const BookingFormPopup = ({ isOpen, onClose }: BookingFormPopupProps) => {
                     <SelectItem value="4+">4+ Children</SelectItem>
                   </SelectContent>
                 </Select>
+                {/* Hidden input for children */}
+                <input type="hidden" name="children" />
               </div>
             </div>
             
             <div>
               <label className="block text-sm font-medium mb-1">Room Type</label>
-              <Select>
+              <Select name="room_type" onValueChange={value => {
+                const event = { target: { value } } as any;
+                (document.getElementsByName('room_type')[0] as HTMLInputElement).value = value;
+              }}>
                 <SelectTrigger>
                   <SelectValue placeholder="Select room type" />
                 </SelectTrigger>
@@ -169,6 +195,8 @@ const BookingFormPopup = ({ isOpen, onClose }: BookingFormPopupProps) => {
                   <SelectItem value="suite">Suite</SelectItem>
                 </SelectContent>
               </Select>
+              {/* Hidden input for room_type */}
+              <input type="hidden" name="room_type" />
             </div>
           </div>
 
