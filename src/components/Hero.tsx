@@ -26,8 +26,17 @@ const Hero = () => {
         </div>
         
         <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Embark on an unforgettable journey through India's rich heritage, stunning landscapes, and vibrant culture
+          <p className="text-xl md:text-2xl mb-2 opacity-90 max-w-2xl mx-auto">
+            <span className="font-semibold">Welcome to Jafri Tour & Travel</span> — your trusted choice for spiritual and cultural journeys in Northern India.
+          </p>
+          <p className="text-lg md:text-xl mb-2 opacity-90 max-w-2xl mx-auto">
+            Begin your sacred <span className="font-semibold text-travel-gold">Char Dham Yatra</span> to <span className="font-semibold">Yamunotri</span>, <span className="font-semibold">Gangotri</span>, <span className="font-semibold">Kedarnath</span>, and <span className="font-semibold">Badrinath</span> with ease and comfort.
+          </p>
+          <p className="text-lg md:text-xl mb-2 opacity-90 max-w-2xl mx-auto">
+            Discover the peaceful vibes of <span className="font-semibold">Haridwar</span> and <span className="font-semibold">Rishikesh</span>, and take in the natural beauty of <span className="font-semibold">Mussoorie</span> and <span className="font-semibold">Dehradun</span> along the way.
+          </p>
+          <p className="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            We offer <span className="font-semibold">customized travel plans</span>, smooth arrangements, local guidance, and dependable service to make your journey meaningful and memorable.
           </p>
         </div>
 
@@ -37,7 +46,12 @@ const Hero = () => {
             Explore Destinations
           </Button>
           
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 transition-all text-lg px-8 py-3">
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-white text-white bg-white/10 hover:bg-white hover:text-travel-primary hover:shadow-2xl hover:border-travel-primary active:bg-travel-primary active:text-white transition-all text-lg px-8 py-3 focus:ring-2 focus:ring-travel-secondary focus:outline-none font-semibold backdrop-blur"
+            style={{display: 'inline-flex', alignItems: 'center'}}
+          >
             <Play className="mr-2 h-5 w-5" />
             Watch Video
           </Button>
