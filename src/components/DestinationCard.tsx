@@ -101,6 +101,12 @@ const DestinationCard = ({ id, name, image, description, duration, price, rating
         >
           View Details
         </Button>
+        <Button
+          asChild
+          className="w-full mt-2 bg-gradient-to-r from-travel-secondary to-travel-primary hover:scale-105 transition-transform text-white"
+        >
+          <a href="tel:+919557538664">📞 Call to Book Your Trip</a>
+        </Button>
       </CardContent>
     </Card>
   );
