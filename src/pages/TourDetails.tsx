@@ -104,12 +104,9 @@ const tourData = {
       "Photography restrictions at some sites"
     ],
     gallery: [
-      "/destinations/char-dham-yatra.png",
-      "/destinations/agra-tour.png",
-      "/destinations/nainital-tour.jpg",
-      "/destinations/nainital-tour.jpg",
-      "/destinations/nainital-tour.jpg",
-      "/destinations/nainital-tour.jpg"
+      "/destinations/chardham/badrinath.jpg",
+      "/destinations/chardham/kedarnath.jpg",
+      "/destinations/chardham/char-dham-yatra.png"
     ]
   },
   'nainital-hills-lakes': {
@@ -187,12 +184,9 @@ const tourData = {
       "Carry water and snacks for excursions"
     ],
     gallery: [
-      "/destinations/nainital-tour.jpg",
-      "/destinations/char-dham-yatra.png",
-      "/destinations/char-dham-yatra.png",
-      "/destinations/char-dham-yatra.png",
-      "/destinations/char-dham-yatra.png",
-      "/destinations/dehradun-rishikesh-haridwar-tour.png"
+      "/destinations/naini/nainital1.webp",
+      "/destinations/naini/nainital2.webp",
+      "/destinations/naini/nainital3.webp",
     ]
   },
   'mussoorie-dehradun-rishikesh-haridwar': {
@@ -275,12 +269,9 @@ const tourData = {
       "Carry water and snacks for excursions"
     ],
     gallery: [
-      "/destinations/dehradun-rishikesh-haridwar-tour.png",
-      "/destinations/nainital-tour.jpg",
-      "/destinations/nainital-tour.jpg",
-      "/destinations/nainital-tour.jpg",
-      "/destinations/nainital-tour.jpg",
-      "/destinations/char-dham-yatra.png"
+      "/destinations/rishi/1.jpg",
+      "/destinations/rishi/3.jpg",
+      "/destinations/rishi/m2.jpg"
     ]
   },
   'amarnath-yatra': {
@@ -374,12 +365,9 @@ const tourData = {
       "Photography restrictions at holy sites"
     ],
     gallery: [
-      "/destinations/char-dham-yatra.png",
-      "/destinations/agra-tour.png",
-      "/destinations/agra-tour.png",
-      "/destinations/agra-tour.png",
-      "/destinations/agra-tour.png",
-      "/destinations/nainital-tour.jpg"
+      "/destinations/amar/amarnath-yatra1.jpg",
+      "/destinations/amar/amarnath-yatra2.jpg",
+      "/destinations/amar/amarnath-yatra3.jpg"
     ]
   },
   'kullu-manali-shimla': {
@@ -389,7 +377,7 @@ const tourData = {
     groupSize: "10-12 People",
     price: 50400,
     originalPrice: 60000,
-    image: "/destinations/nainital-tour.jpg",
+    image: "/destinations/kullu/shimla-hill.jpg",
     rating: 4.8,
     reviews: 203,
     highlights: [
@@ -468,12 +456,9 @@ const tourData = {
       "Photography allowed at most sites"
     ],
     gallery: [
-      "/destinations/nainital-tour.jpg",
-      "/destinations/char-dham-yatra.png",
-      "/destinations/char-dham-yatra.png",
-      "/destinations/char-dham-yatra.png",
-      "/destinations/char-dham-yatra.png",
-      "/destinations/dehradun-rishikesh-haridwar-tour.png"
+      "/destinations/kullu/shimla.jpg",
+      "/destinations/kullu/shimla-hill.jpg",
+      "/destinations/kullu/kullu.jpg"
     ]
   },
   'ayodhya-prayagraj-banaras': {
@@ -556,12 +541,9 @@ const tourData = {
       "Respect local customs and traditions"
     ],
     gallery: [
-      "/destinations/agra-tour.png",
-      "/destinations/agra-tour.png",
-      "/destinations/agra-tour.png",
-      "/destinations/agra-tour.png",
-      "/destinations/char-dham-yatra.png",
-      "/destinations/delhi.png"
+      "/destinations/ayodhya/vishwanath.jpg",
+      "/destinations/ayodhya/triveni-sangam-min.jpg",
+      "/destinations/ayodhya/Anand-Bhavan.jpg"
     ]
   },
   // Tour package-based tours (keeping original data)
@@ -1380,7 +1362,7 @@ const TourDetails = () => {
                         Highly recommended for anyone wanting to explore India's rich heritage."
                       </p>
                       <div className="text-sm text-gray-500">
-                        - Sarah Johnson, USA
+                        - Sarah India
                       </div>
                     </div>
                   </CardContent>

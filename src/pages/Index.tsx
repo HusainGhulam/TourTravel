@@ -35,7 +35,19 @@ const Index = () => {
       duration: "10 Days / 9 Nights",
       price: "Rs 8,000 Per Day",
       rating: 4.8,
-      tags: ["Yamunotri", "Gangotri", "Kedarnath","Badrinath","12 Seater Tempo Traveller"]
+      tags: ["Yamunotri", "Gangotri", "Kedarnath","Badrinath","Swift Dzire",
+  "Innova Crysta",
+  "Kia Carens",
+  "12 Seater Tempo Traveller",
+  "13 Seater Tempo Traveller",
+  "17 Seater Tempo Traveller",
+  "20 Seater Tempo Traveller",
+  "25 Seater Tempo Traveller",
+  "27 Seater Luxury Bus",
+  "32 Seater Luxury Bus",
+  "42 Seater Luxury Bus",
+  "52 Seater Luxury Bus"
+]
       
     },
     {
@@ -46,7 +58,19 @@ const Index = () => {
       duration: "5 Days / 4 Nights",
       price: "Rs 7500 Per Day",
       rating: 4.6,
-      tags: ["Nature", "Hills", "Relax","Adventure","12 Seater Tempo Traveller"]
+      tags: ["Nature", "Hills", "Relax","Adventure","Swift Dzire",
+  "Innova Crysta",
+  "Kia Carens",
+  "12 Seater Tempo Traveller",
+  "13 Seater Tempo Traveller",
+  "17 Seater Tempo Traveller",
+  "20 Seater Tempo Traveller",
+  "25 Seater Tempo Traveller",
+  "27 Seater Luxury Bus",
+  "32 Seater Luxury Bus",
+  "42 Seater Luxury Bus",
+  "52 Seater Luxury Bus"
+]
     },
     
     {
@@ -57,7 +81,19 @@ const Index = () => {
       duration: "6 Days / 5 Nights",
       price: "Rs 5,500 Per Day",
       rating: 4.7,
-      tags: ["Nature", "Hills", "Spiritual", "12 Seater Tempo Traveller"]
+      tags: ["Nature", "Hills", "Spiritual", "Swift Dzire",
+  "Innova Crysta",
+  "Kia Carens",
+  "12 Seater Tempo Traveller",
+  "13 Seater Tempo Traveller",
+  "17 Seater Tempo Traveller",
+  "20 Seater Tempo Traveller",
+  "25 Seater Tempo Traveller",
+  "27 Seater Luxury Bus",
+  "32 Seater Luxury Bus",
+  "42 Seater Luxury Bus",
+  "52 Seater Luxury Bus"
+]
     },
     {
       id: 4,
@@ -67,7 +103,19 @@ const Index = () => {
       duration: "8 Days / 7 Nights",
       price: "Rs 9,500 Per Day",
       rating: 4.9,
-      tags: ["Spiritual", "Pilgrimage", "Kashmir", "Amarnath", "12 Seater Tempo Traveller"]
+      tags: ["Spiritual", "Pilgrimage", "Kashmir", "Amarnath", "Swift Dzire",
+  "Innova Crysta",
+  "Kia Carens",
+  "12 Seater Tempo Traveller",
+  "13 Seater Tempo Traveller",
+  "17 Seater Tempo Traveller",
+  "20 Seater Tempo Traveller",
+  "25 Seater Tempo Traveller",
+  "27 Seater Luxury Bus",
+  "32 Seater Luxury Bus",
+  "42 Seater Luxury Bus",
+  "52 Seater Luxury Bus"
+]
     },
     {
       id: 5,
@@ -77,7 +125,24 @@ const Index = () => {
       duration: "7 Days / 6 Nights",
       price: "Rs 7,200 Per Day",
       rating: 4.8,
-      tags: ["Mountains", "Adventure", "Snow", "Culture", "12 Seater Tempo Traveller"]
+      tags: [
+        "Mountains",
+        "Adventure",
+        "Snow",
+        "Culture",
+        "Swift Dzire",
+        "Innova Crysta",
+        "Kia Carens",
+        "12 Seater Tempo Traveller",
+        "13 Seater Tempo Traveller",
+        "17 Seater Tempo Traveller",
+        "20 Seater Tempo Traveller",
+        "25 Seater Tempo Traveller",
+        "27 Seater Luxury Bus",
+        "32 Seater Luxury Bus",
+        "42 Seater Luxury Bus",
+        "52 Seater Luxury Bus"
+      ]
     },
     {
       id: 6,
@@ -87,7 +152,19 @@ const Index = () => {
       duration: "6 Days / 5 Nights",
       price: "Rs 6,800 Per Day",
       rating: 4.7,
-      tags: ["Spiritual", "Temples", "Ganga", "Heritage", "12 Seater Tempo Traveller"]
+      tags: ["Spiritual", "Temples", "Ganga", "Heritage", "Swift Dzire",
+  "Innova Crysta",
+  "Kia Carens",
+  "12 Seater Tempo Traveller",
+  "13 Seater Tempo Traveller",
+  "17 Seater Tempo Traveller",
+  "20 Seater Tempo Traveller",
+  "25 Seater Tempo Traveller",
+  "27 Seater Luxury Bus",
+  "32 Seater Luxury Bus",
+  "42 Seater Luxury Bus",
+  "52 Seater Luxury Bus"
+]
     }
   ];
 
