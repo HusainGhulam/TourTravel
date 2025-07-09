@@ -469,8 +469,90 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Google Reviews Section */}
-      <GoogleReviews placeId="ChIJN1t_tDeuEmsRUsoyG83frY4" />
+      {/* Google Reviews Section (Static, shown when API key is missing) */}
+      <section className="py-20 px-4 bg-gradient-to-r from-travel-sand/30 to-travel-azure/20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 animate-fade-in-up">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-travel-primary to-travel-secondary bg-clip-text text-transparent">
+              What Our Travelers Say
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Real experiences from our happy customers on Google Reviews
+            </p>
+            {/* Error message for missing API key */}
+            {/*<div className="flex flex-col items-center justify-center mt-4">
+              <p className="text-red-600 mb-2 font-semibold">Unable to load Google Reviews</p>
+              <p className="text-gray-600 text-sm">Google Places API key not found. Please add VITE_GOOGLE_PLACES_API_KEY to your .env file</p>
+            </div>*/}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Static Reviews */}
+            {[ {
+              author_name: 'Neha Jha',
+              rating: 4,
+              text: 'All good but they have not provided air condition at all. So plz clear AC service from them before booking. Driving was superb.. behaviour was very professional all the best to the Driver Mr. Anwar( Jack).',
+              relative_time_description: '1 month ago',
+              profile_photo_url: '',
+            }, {
+              author_name: 'Vinay Singh Rawat',
+              rating: 5,
+              
+              text: 'Wonderful Travel Experience with Jafri Tour and  Travels, Mussoorie!I recently had the pleasure of booking through Jafri Travels and I must say, it was an absolutely delightful experience',
+              relative_time_description: '1 month ago',
+              profile_photo_url: '',
+            },
+            {
+              author_name: 'Sumit Kabariya',
+              rating: 5,
+              text: 'Ekdum mast banda hai.He is not give only service but he serve us a joy as like as a family member',
+              relative_time_description: '6 months ago',
+              profile_photo_url: '',
+            }
+          ].map((review, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                <CardContent className="p-6">
+                  <div className="flex items-center mb-4">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star 
+                          key={i} 
+                          className={`h-4 w-4 ${i < review.rating ? 'text-yellow-500 fill-current' : 'text-gray-300'}`} 
+                        />
+                      ))}
+                    </div>
+                    <span className="text-sm text-gray-500 ml-2">{review.relative_time_description}</span>
+                  </div>
+                  <p className="text-gray-700 mb-4 italic line-clamp-4">
+                    "{review.text}"
+                  </p>
+                  <div className="flex items-center">
+                    <div className={`w-10 h-10 bg-gradient-to-r from-travel-primary to-travel-secondary rounded-full flex items-center justify-center text-white font-bold mr-3`}>
+                      {review.author_name.split(' ').map(word => word.charAt(0)).join('').toUpperCase().slice(0, 2)}
+                    </div>
+                    <div>
+                      <p className="font-semibold text-travel-primary">{review.author_name}</p>
+                      <p className="text-sm text-gray-500">Verified Google Review</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          {/* View More Reviews Button */}
+          <div className="text-center mt-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+            <Button 
+              className="bg-gradient-to-r from-travel-primary to-travel-secondary hover:scale-105 transition-transform text-white px-8 py-3"
+              onClick={() => {
+                const googleReviewsUrl = `https://maps.app.goo.gl/H7d3e8gzz5WsE6As5?g_st=aw`;
+                window.open(googleReviewsUrl, '_blank');
+              }}
+            >
+              <Star className="mr-2 h-5 w-5" />
+              View All Google Reviews
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* Stats Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-travel-primary to-travel-secondary text-white">
