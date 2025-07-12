@@ -1,5 +1,5 @@
 # Robots.txt for Jafri Tour & Travel
-# https://jafritourandtravel.com
+# https://jafritourntravel.com
 
 # Allow all search engines to crawl the site
 User-agent: *
@@ -49,7 +49,7 @@ Disallow: /*.css$
 Disallow: /*.map$
 
 # Sitemap location
-Sitemap: https://jafritourandtravel.com/sitemap.xml
+Sitemap: https://jafritourntravel.com/sitemap.xml
 
 # Host directive
-Host: https://jafritourandtravel.com
+Host: https://jafritourntravel.com
