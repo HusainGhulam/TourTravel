@@ -58,50 +58,20 @@ const Contact = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Google Map (replaces Contact Form) */}
             <Card className="border-0 shadow-lg">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold mb-6 text-travel-ocean">Send us a Message</h2>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-2">First Name</label>
-                      <Input placeholder="Enter your first name" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2">Last Name</label>
-                      <Input placeholder="Enter your last name" />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
-                    <Input type="email" placeholder="Enter your email address" />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Phone Number</label>
-                    <Input placeholder="Enter your phone number" />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Subject</label>
-                    <Input placeholder="What's this about?" />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Message</label>
-                    <Textarea 
-                      placeholder="Tell us about your travel plans..."
-                      rows={5}
-                    />
-                  </div>
-                  
-                  <Button className="w-full bg-gradient-to-r from-travel-ocean to-travel-sunset hover:scale-105 transition-transform">
-                    <Send className="h-4 w-4 mr-2" />
-                    Send Message
-                  </Button>
-                </form>
+              <CardContent className="p-0">
+                <h2 className="text-3xl font-bold mb-0 pb-0 text-travel-ocean p-8 pt-8">Our Location</h2>
+                <div className="relative w-full aspect-[16/14] sm:aspect-[16/12] lg:aspect-[16/16] rounded-lg overflow-hidden">
+                  <iframe
+                    title="Jafri Tour & Travel Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.234234234!2d78.123456789!3d30.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929e7b1b1b1b1%3A0x123456789abcdef!2sJafri%20Tour%20%26%20Travel!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
               </CardContent>
             </Card>
 
@@ -130,19 +100,6 @@ const Contact = () => {
                   );
                 })}
               </div>
-
-              {/* Map Placeholder */}
-              <Card className="border-0 shadow-md mt-8">
-                <CardContent className="p-0">
-                  <div className="h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <div className="text-center text-gray-500">
-                      <MapPin className="h-12 w-12 mx-auto mb-2" />
-                      <p>Interactive Map</p>
-                      <p className="text-sm">Google Maps integration would go here</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
