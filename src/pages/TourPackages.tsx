@@ -5,6 +5,7 @@ import TourPackage from "@/components/TourPackage";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Users, MapPin } from "lucide-react";
+import GallerySlider from '../components/GallerySlider';
 
 const tourPackages = [
   {
@@ -131,6 +132,7 @@ const TourPackages = () => {
         </div>
       </section>
 
+      <GallerySlider />
       <Footer />
     </div>
   );

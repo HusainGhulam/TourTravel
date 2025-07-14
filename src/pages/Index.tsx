@@ -13,6 +13,7 @@ import TourPackage from '../components/TourPackage';
 import ServiceCard from '../components/ServiceCard';
 import GoogleReviews from '../components/GoogleReviews';
 import Footer from '../components/Footer';
+import GallerySlider from '../components/GallerySlider';
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -469,6 +470,8 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Gallery Slider - show before Google Reviews */}
+      <GallerySlider />
       {/* Google Reviews Section (Static, shown when API key is missing) */}
       <section className="py-20 px-4 bg-gradient-to-r from-travel-sand/30 to-travel-azure/20">
         <div className="max-w-6xl mx-auto">
