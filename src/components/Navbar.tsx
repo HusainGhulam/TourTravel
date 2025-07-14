@@ -58,9 +58,10 @@ const Navbar = () => {
               );
             })}
             <Button 
-              className="bg-green-600 hover:bg-green-700 text-white hover:scale-105 transition-transform"
+              className="bg-green-600 hover:bg-green-700 text-white hover:scale-105 transition-transform relative"
               onClick={handleWhatsAppClick}
             >
+              <span className="hidden md:inline-block mr-2 text-2xl select-none pointer-events-none text-travel-accent animate-wiggle-left-bottom">👉</span>
               <MessageCircle className="h-4 w-4 mr-2" />
               Chat on WhatsApp
             </Button>
