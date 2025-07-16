@@ -62,10 +62,17 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Popular Destinations</h4>
               <ul className="space-y-2">
-                {['Char Dham Yatra', 'Nainital Hills', 'Haridwar', 'Amarnath Yatra', 'Shimla', 'Ayodhya Prayagraj'].map((destination) => (
-                  <li key={destination}>
-                    <a href="#" className="text-gray-400 hover:text-travel-ocean transition-colors">
-                      {destination}
+                {[
+                  { name: 'Char Dham Yatra', slug: 'char-dham-yatra' },
+                  { name: 'Nainital Hills', slug: 'nainital-hills-lakes' },
+                  { name: 'Mussoorie, Dehradun, Rishikesh ,Haridwar Tour', slug: 'mussoorie-dehradun-rishikesh-haridwar' },
+                  { name: 'Amarnath Yatra Tour', slug: 'amarnath-yatra' },
+                  { name: 'Kullu Manali Shimla Tour', slug: 'kullu-manali-shimla' },
+                  { name: 'Ayodhya Prayagraj Banaras Tour', slug: 'ayodhya-prayagraj-banaras' },
+                ].map((destination) => (
+                  <li key={destination.slug}>
+                    <a href={`/tour-details/${destination.slug}`} className="text-gray-400 hover:text-travel-ocean transition-colors">
+                      {destination.name}
                     </a>
                   </li>
                 ))}
@@ -90,7 +97,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-travel-ocean flex-shrink-0" />
-                  <span className="text-gray-400">info@jafritourtravel.com</span>
+                  <span className="text-gray-400">travelsjafri@gmail.com</span>
                 </div>
               </div>
             </div>

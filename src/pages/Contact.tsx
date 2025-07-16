@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: ["info@Jafri.com", "support@Jafri.com"]
+    details: ["travelsjafri@gmail.com", "zackJafri@gmail.com"]
   },
   {
     icon: Clock,

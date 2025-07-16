@@ -1279,11 +1279,11 @@ const TourDetails = () => {
                       </div>
                       <div className="flex items-center">
                         <Mail className="h-4 w-4 mr-2 text-travel-primary" />
-                        <span>info@jafritravel.com</span>
+                        <span>travelsjafri@gmail.com</span>
                       </div>
                       <div className="flex items-center">
                         <Globe className="h-4 w-4 mr-2 text-travel-primary" />
-                        <span>www.jafritravel.com</span>
+                        <span>www.jafritourntravel.com</span>
                       </div>
                     </div>
                   </div>
