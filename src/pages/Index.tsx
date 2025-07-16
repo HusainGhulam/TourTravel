@@ -316,9 +316,12 @@ const Index = () => {
                     <SelectItem value="heritage">Heritage Sites</SelectItem>
                     <SelectItem value="spiritual">Spiritual Places</SelectItem>
                     <SelectItem value="adventure">Adventure Spots</SelectItem>
-                    <SelectItem value="kerala">Kerala</SelectItem>
-                    <SelectItem value="rajasthan">Rajasthan</SelectItem>
-                    <SelectItem value="himachal">Himachal Pradesh</SelectItem>
+                    <SelectItem value="CharDhamYatra">Char Dham Yatra</SelectItem>
+                    <SelectItem value="NainitalHills">Nainital Hills</SelectItem>
+                    <SelectItem value="Mussoorie, Dehradun, Rishikesh & Haridwar">Mussoorie, Dehradun..</SelectItem>
+                    <SelectItem value="Amarnath Yatra ">Amarnath Yatra </SelectItem>
+                    <SelectItem value="Kullu Manali">Kullu Manali</SelectItem>
+                    <SelectItem value="Ayodhya Prayagraj">Ayodhya Prayagraj</SelectItem>
                   </SelectContent>
                 </Select>
                 
@@ -356,8 +359,7 @@ const Index = () => {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="tour-package">Tour Package</SelectItem>
-                    <SelectItem value="hotel">Hotel</SelectItem>
-                    <SelectItem value="flight">Flight</SelectItem>
+        
                   </SelectContent>
                 </Select>
                 
