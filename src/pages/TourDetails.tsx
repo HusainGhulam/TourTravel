@@ -1098,7 +1098,7 @@ const TourDetails = () => {
         <div className="absolute inset-0">
           <img
             src={tour.image}
-            alt={tour.title}
+            alt={`${tour.title} - Tour main photo`}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -1201,7 +1201,7 @@ const TourDetails = () => {
                       <div key={index} className="overflow-hidden rounded-lg">
                         <img
                           src={image}
-                          alt={`Gallery ${index + 1}`}
+                          alt={`${tour.title} - Gallery image ${index + 1}`}
                           className="w-full h-32 object-cover hover:scale-110 transition-transform duration-300"
                         />
                       </div>

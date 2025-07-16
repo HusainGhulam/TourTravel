@@ -60,7 +60,7 @@ const TourPackage = ({
         <div className="relative overflow-hidden">
           <img
             src={`${image}?auto=format&fit=crop&w=600&h=300&q=80`}
-            alt={title}
+            alt={`${title} - Tour package photo`}
             className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
           />
           

@@ -14,6 +14,19 @@ const galleryImages = [
   "/destinations/agra-tour.png"
 ];
 
+const galleryCaptions = [
+  "Unforgettable Journeys Await!",
+  "Book Early & Save Big on Your Next Adventure!",
+  "Explore India's Hidden Gems with Us!",
+  "Travel. Discover. Experience. Repeat.",
+  "Special Deals for Group Tours!",
+  "Your Dream Destination is Just a Click Away!",
+  "Adventure Awaits – Let's Go!",
+  "Luxury & Comfort, Every Step of the Way!",
+  "Incredible India, Incredible You!",
+  "Plan Your Escape Today!"
+];
+
 const carouselOpts = {
   slidesToScroll: 1,
   breakpoints: {
@@ -41,14 +54,18 @@ const GallerySlider = () => (
               key={idx}
               className="px-2 w-full sm:w-1/2 lg:w-1/4"
             >
-              <Card className="overflow-hidden border-0 shadow-lg w-full">
+              <Card className="overflow-hidden border-0 shadow-lg w-full relative">
                 <CardContent className="p-0">
                   <img
                     src={src}
-                    alt={`Gallery image ${idx + 1}`}
+                    alt={galleryCaptions[idx % galleryCaptions.length] + ' - Travel destination photo'}
                     className="w-full h-64 object-cover"
                     loading="lazy"
                   />
+                  {/* Text Overlay */}
+                  <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white text-center py-3 px-2 text-base font-semibold backdrop-blur-sm">
+                    {galleryCaptions[idx % galleryCaptions.length]}
+                  </div>
                 </CardContent>
               </Card>
             </CarouselItem>

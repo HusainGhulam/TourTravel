@@ -83,7 +83,7 @@ const AboutUs = () => {
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&h=400&q=80"
-                alt="Our Journey"
+                alt="Our Journey - JafriTour&Travel story photo"
                 className="rounded-lg shadow-2xl"
               />
             </div>
@@ -153,7 +153,7 @@ const AboutUs = () => {
                 <CardContent className="p-6 text-center">
                   <img
                     src={`https://images.unsplash.com/${member.image}?auto=format&fit=crop&w=200&h=200&q=80`}
-                    alt={member.name}
+                    alt={`${member.name} - Team member photo`}
                     className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                   />
                   <h3 className="text-lg font-bold mb-1">{member.name}</h3>

@@ -273,10 +273,27 @@ const Index = () => {
     let filteredResults = [...tourPackages];
     
     if (selectedDestination && selectedDestination !== 'all') {
-      filteredResults = filteredResults.filter(pkg => 
-        pkg.category.toLowerCase().includes(selectedDestination.toLowerCase()) ||
-        pkg.title.toLowerCase().includes(selectedDestination.toLowerCase())
-      );
+      // Try to match with popularDestinations name or tags if possible
+      let destName = selectedDestination;
+      let extraTerms = [];
+      const popMatch = popularDestinations.find(d => d.name.toLowerCase().includes(selectedDestination.toLowerCase()) || d.tags.some(tag => tag.toLowerCase().includes(selectedDestination.toLowerCase())));
+      if (popMatch) {
+        destName = popMatch.name;
+        extraTerms = popMatch.tags;
+      }
+      filteredResults = filteredResults.filter(pkg => {
+        const dest = destName.trim().toLowerCase();
+        // Check title, category, and also any extra terms from tags
+        return (
+          pkg.category.toLowerCase().includes(dest) ||
+          pkg.title.toLowerCase().includes(dest) ||
+          dest.includes(pkg.title.toLowerCase()) ||
+          dest.includes(pkg.category.toLowerCase()) ||
+          pkg.title.replace(/[^a-zA-Z0-9]/g, '').toLowerCase().includes(dest.replace(/[^a-zA-Z0-9]/g, '')) ||
+          dest.replace(/[^a-zA-Z0-9]/g, '').includes(pkg.title.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()) ||
+          extraTerms.some(term => pkg.title.toLowerCase().includes(term.toLowerCase()) || pkg.category.toLowerCase().includes(term.toLowerCase()) || dest.includes(term.toLowerCase()) || term.toLowerCase().includes(dest))
+        );
+      });
     }
 
     if (numberOfTravelers) {
@@ -313,15 +330,14 @@ const Index = () => {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">All Destinations</SelectItem>
-                    <SelectItem value="heritage">Heritage Sites</SelectItem>
-                    <SelectItem value="spiritual">Spiritual Places</SelectItem>
-                    <SelectItem value="adventure">Adventure Spots</SelectItem>
-                    <SelectItem value="CharDhamYatra">Char Dham Yatra</SelectItem>
-                    <SelectItem value="NainitalHills">Nainital Hills</SelectItem>
-                    <SelectItem value="Mussoorie, Dehradun, Rishikesh & Haridwar">Mussoorie, Dehradun..</SelectItem>
-                    <SelectItem value="Amarnath Yatra ">Amarnath Yatra </SelectItem>
+                    <SelectItem value="Heritage">Heritage Sites</SelectItem>
+                    <SelectItem value="Spiritual">Spiritual Places</SelectItem>
+                    <SelectItem value="Adventure">Adventure Spots</SelectItem>
+                    <SelectItem value="Nainital">Nainital</SelectItem>
+                    <SelectItem value="Mussoorie">Mussoorie</SelectItem>
+                    <SelectItem value="Amarnath">Amarnath</SelectItem>
                     <SelectItem value="Kullu Manali">Kullu Manali</SelectItem>
-                    <SelectItem value="Ayodhya Prayagraj">Ayodhya Prayagraj</SelectItem>
+                    <SelectItem value="Ayodhya">Ayodhya</SelectItem>
                   </SelectContent>
                 </Select>
                 

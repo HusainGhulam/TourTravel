@@ -89,7 +89,7 @@ const HotelCard = ({ hotel }: { hotel: typeof hotels[0] }) => {
         <div className="relative overflow-hidden">
           <img
             src={`https://images.unsplash.com/${hotel.image}?auto=format&fit=crop&w=500&h=300&q=80`}
-            alt={hotel.name}
+            alt={`${hotel.name} - Hotel photo`}
             className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
           />
           
