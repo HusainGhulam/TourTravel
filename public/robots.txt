@@ -11,15 +11,13 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
-Crawl-delay: 1
 
 User-agent: DuckDuckBot
 Allow: /
-Crawl-delay: 1
+
 
 # Social media bots
 User-agent: Twitterbot
@@ -49,6 +47,3 @@ Disallow: /*.map$
 
 # Sitemap location
 Sitemap: https://jafritourntravel.com/sitemap.xml
-
-# Host directive
-Host: https://jafritourntravel.com
