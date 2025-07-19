@@ -36,7 +36,7 @@ const Footer = () => {
                 Sharing the beauty and heritage of India with travelers India.
       Creating unforgettable memories since 2009.
               </p>
-            <div className="flex space-x-4">
+              <div className="flex space-x-4">
 				  <a
 					href="https://www.facebook.com/share/1GFPnJTAgS/"
 					target="_blank"
@@ -63,7 +63,7 @@ const Footer = () => {
 				  </a>
 				</div>
 
-
+            </div>
 
             {/* Quick Links */}
             <div>
