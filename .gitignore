@@ -22,3 +22,19 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# OS-specific files
+Thumbs.db
+
+# Environment files
+.env
+.env.*
+
+# Cache
+.cache/
+
+# Bun lock file
+bun.lockb
+
+# Temp directory
+temp/
