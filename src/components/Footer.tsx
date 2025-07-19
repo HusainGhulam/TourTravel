@@ -36,13 +36,34 @@ const Footer = () => {
                 Sharing the beauty and heritage of India with travelers India.
       Creating unforgettable memories since 2009.
               </p>
-              <div className="flex space-x-4">
-                <Facebook className="h-5 w-5 text-gray-400 hover:text-travel-ocean cursor-pointer transition-colors" />
-                <Twitter className="h-5 w-5 text-gray-400 hover:text-travel-ocean cursor-pointer transition-colors" />
-                <Instagram className="h-5 w-5 text-gray-400 hover:text-travel-ocean cursor-pointer transition-colors" />
-                <Youtube className="h-5 w-5 text-gray-400 hover:text-travel-ocean cursor-pointer transition-colors" />
-              </div>
-            </div>
+            <div className="flex space-x-4">
+				  <a
+					href="https://www.facebook.com/share/1GFPnJTAgS/"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Visit our Facebook page"
+				  >
+					<Facebook className="h-5 w-5 text-gray-400 hover:text-travel-ocean cursor-pointer transition-colors" />
+				  </a>
+				  <a
+					href="https://www.instagram.com/jafritravels/?utm_source=qr&igsh=Y2VjenpnaGttbHFw"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Visit our Instagram page"
+				  >
+					<Instagram className="h-5 w-5 text-gray-400 hover:text-travel-ocean cursor-pointer transition-colors" />
+				  </a>
+				  <a
+					href="https://www.youtube.com/@zackjafri1898"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Visit our YouTube channel"
+				  >
+					<Youtube className="h-5 w-5 text-gray-400 hover:text-travel-ocean cursor-pointer transition-colors" />
+				  </a>
+				</div>
+
+
 
             {/* Quick Links */}
             <div>
