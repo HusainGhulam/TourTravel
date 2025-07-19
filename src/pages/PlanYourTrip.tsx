@@ -10,6 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { MapPin, Calendar, Users, Star, Clock, Plane, Hotel, Camera, Shield, Utensils, Car } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const PlanYourTrip = () => {
   const [tripDetails, setTripDetails] = useState({
@@ -71,6 +72,11 @@ const PlanYourTrip = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-orange-50">
+      <Helmet>
+        <title>Plan Your Trip | Jafri Tour & Travel</title>
+        <meta name="description" content="Plan your perfect trip with Jafri Tour & Travel. Customize your travel experience in India with our expert guidance and personalized services." />
+        <link rel="canonical" href="https://jafritourntravel.com/plan-your-trip" />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}

@@ -14,6 +14,7 @@ import ServiceCard from '../components/ServiceCard';
 import GoogleReviews from '../components/GoogleReviews';
 import Footer from '../components/Footer';
 import GallerySlider from '../components/GallerySlider';
+import { Helmet } from 'react-helmet-async';
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -310,6 +311,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-travel-pearl via-white to-travel-cream">
+      <Helmet>
+        <title>Jafri Tour & Travel | Incredible India Tours, Char Dham, Mussoorie, Haridwar, Rishikesh</title>
+        <meta name="description" content="Jafri Tour & Travel offers the best travel packages for Char Dham Yatra, Mussoorie, Haridwar, Rishikesh, Dehradun, and more. Discover spiritual, cultural, and adventure tours across India." />
+        <link rel="canonical" href="https://jafritourntravel.com/" />
+      </Helmet>
       <Navbar />
       <Hero />
       

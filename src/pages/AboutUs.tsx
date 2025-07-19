@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Award, Users, Globe, Heart, Target, Eye } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
 
 const teamMembers = [
   {
@@ -42,6 +43,11 @@ const achievements = [
 const AboutUs = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>About Us | Jafri Tour & Travel</title>
+        <meta name="description" content="Learn about Jafri Tour & Travel, our mission, team, and experience in providing the best travel experiences across India." />
+        <link rel="canonical" href="https://jafritourntravel.com/about-us" />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}

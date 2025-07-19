@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
 
 const contactInfo = [
   {
@@ -33,6 +34,11 @@ const contactInfo = [
 const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Contact Us | Jafri Tour & Travel</title>
+        <meta name="description" content="Contact Jafri Tour & Travel for inquiries, bookings, and travel assistance. We're here to help you plan your perfect journey in India." />
+        <link rel="canonical" href="https://jafritourntravel.com/contact" />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}

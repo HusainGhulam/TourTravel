@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter, MapPin, Clock, Users, Star, Heart, CheckCircle } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
 
 // Popular Destinations Data (same as Index page)
 const popularDestinations = [
@@ -238,6 +239,11 @@ const additionalDestinations = [
 const Destinations = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-travel-pearl via-white to-travel-cream">
+      <Helmet>
+        <title>Destinations in India | Jafri Tour & Travel</title>
+        <meta name="description" content="Explore top destinations in India including Char Dham, Nainital, Mussoorie, Haridwar, Rishikesh, and more with Jafri Tour & Travel." />
+        <link rel="canonical" href="https://jafritourntravel.com/destinations" />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}

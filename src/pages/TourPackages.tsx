@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Users, MapPin } from "lucide-react";
 import GallerySlider from '../components/GallerySlider';
+import { Helmet } from 'react-helmet-async';
 
 const tourPackages = [
   {
@@ -83,6 +84,11 @@ const categories = ["All", "Heritage", "Nature", "Luxury", "Beach", "Adventure",
 const TourPackages = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Tour Packages in India | Jafri Tour & Travel</title>
+        <meta name="description" content="Browse curated tour packages for every traveler: heritage, nature, luxury, adventure, and more. Book your next journey with Jafri Tour & Travel." />
+        <link rel="canonical" href="https://jafritourntravel.com/tour-packages" />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}

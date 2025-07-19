@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Star, MapPin, Wifi, Car, Coffee, Utensils, Heart } from "lucide-react";
 import { useState } from "react";
 import BookingFormPopup from "@/components/BookingFormPopup";
+import { Helmet } from 'react-helmet-async';
 
 const hotels = [
   {
@@ -169,6 +170,11 @@ const HotelCard = ({ hotel }: { hotel: typeof hotels[0] }) => {
 const Hotels = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Hotels in India | Jafri Tour & Travel</title>
+        <meta name="description" content="Find premium hotels and luxury accommodations across India with Jafri Tour & Travel. Book your stay for a comfortable journey." />
+        <link rel="canonical" href="https://jafritourntravel.com/hotels" />
+      </Helmet>
       <Navbar />
       
       {/* Hero Section */}

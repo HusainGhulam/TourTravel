@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play, MapPin, Star } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -41,10 +42,12 @@ const Hero = () => {
         </div>
 
         <div className="animate-fade-in-up flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" style={{ animationDelay: '0.4s' }}>
-          <Button size="lg" className="bg-gradient-to-r from-travel-primary to-travel-secondary hover:scale-105 transition-transform text-lg px-8 py-3 text-white">
-            <MapPin className="mr-2 h-5 w-5" />
-            Explore Destinations
-          </Button>
+          <Link to="/popular-destinations">
+            <Button size="lg" className="bg-gradient-to-r from-travel-primary to-travel-secondary hover:scale-105 transition-transform text-lg px-8 py-3 text-white">
+              <MapPin className="mr-2 h-5 w-5" />
+              Popular Tourist Destinations in India
+            </Button>
+          </Link>
           
           <Button
             size="lg"
